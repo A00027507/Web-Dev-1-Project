@@ -1,2 +1,2 @@
 # Web-Dev-1-Project
-collocational cars site for John O’Reilly
+Collocational cars site for John O’Reilly
