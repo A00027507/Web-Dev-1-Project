@@ -9,12 +9,13 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <h1 class="site-title">cars</h1>
+            <h1 class="site-title">O'Railly's Super Cars</h1>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
             <nav class="site-nav" aria-label="Primary">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="brands.html">brands</a></li>
+                    <li><a href="brands.html">Brands</a></li>
                     <li><a href="contact.html" aria-current="page">Contact</a></li>
                 </ul>
             </nav>
@@ -22,47 +23,84 @@
     </header>
 
     <main>
-        <section class="page-header">
+        <section class="contact-hero reveal">
             <div class="container">
                 <h2>Get In Touch</h2>
-                <p>Let visitors know how they can connect with you or ask questions.</p>
+                <p>Driven by passion. Reach out about models, test drives, or services.</p>
             </div>
         </section>
 
-        <section class="contact-info">
-            <div class="container">
-                <h3>Contact Details</h3>
-                <ul>
-                    <li>Email: info@example.com</li>
-                    <li>Phone: (123) 456-7890</li>
-                    <li>Address: 123 Main Street, Hometown, USA</li>
-                </ul>
-            </div>
-        </section>
+        <section class="reveal">
+            <div class="container contact-wrap">
+                <div class="contact-info contact-card">
+                    <h3>Contact Details</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <span aria-hidden="true">✉️</span>
+                            <a href="mailto:info@example.com">info@example.com</a>
+                        </li>
+                        <li>
+                            <span aria-hidden="true">📞</span>
+                            <a href="tel:+11234567890">(123) 456-7890</a>
+                        </li>
+                        <li>
+                            <span aria-hidden="true">📍</span>
+                            <address>123 Main Street, Hometown, USA</address>
+                        </li>
+                        <li>
+                            <span aria-hidden="true">🕒</span>
+                            Mon–Fri: 9:00–17:30
+                        </li>
+                    </ul>
 
-        <section class="contact-form">
-            <div class="container">
-                <h3>Send Us a Message</h3>
-                <form action="#" method="post">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name">
+                    <div class="map-embed" aria-label="Location map" role="img">
+                        <div class="map-embed__placeholder">Map preview</div>
+                    </div>
+                </div>
+                <div class="contact-form contact-card">
+                    <h3>Send Us a Message</h3>
+                    <form id="contact-form" action="#" method="post" novalidate>
+                        <div class="form-field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" required aria-describedby="name-error">
+                            <p id="name-error" class="field-error" aria-live="polite"></p>
+                        </div>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email">
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required aria-describedby="email-error">
+                            <p id="email-error" class="field-error" aria-live="polite"></p>
+                        </div>
 
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="How can we help?"></textarea>
+                        <div class="form-field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="How can we help?" required aria-describedby="message-error"></textarea>
+                            <p id="message-error" class="field-error" aria-live="polite"></p>
+                        </div>
 
-                    <button type="submit">Submit</button>
-                </form>
+                        <!-- Honeypot field to discourage spam bots -->
+                        <div class="hp-field" aria-hidden="true">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Submit</button>
+                        </div>
+
+                        <div class="form-status" role="status" aria-live="polite"></div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2024 Sample Site. All rights reserved.</p>
+            <p>&copy; 2024 O'Railly's Super Cars. All rights reserved.</p>
         </div>
     </footer>
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+    <script src="script.js" defer></script>
 </body>
 </html>
