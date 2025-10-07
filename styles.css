@@ -249,14 +249,8 @@ body {
 
 /* Reveal on scroll utilities */
 .reveal {
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 500ms ease, transform 500ms ease;
-}
-
-.reveal.in-view {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
 }
 
 /* Back to top button */
@@ -295,27 +289,11 @@ body {
     .site-header .container {
         align-items: center;
     }
-    .nav-toggle {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.08);
-        color: #fff;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        cursor: pointer;
-    }
+    .nav-toggle { display: none; }
     .site-nav ul {
         flex-direction: column;
         gap: 0.75rem;
         padding: 1rem 0 0;
     }
-    .site-nav {
-        display: none;
-    }
-    .site-nav.open {
-        display: block;
-    }
+    .site-nav { display: block; }
 }
