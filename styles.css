@@ -289,11 +289,51 @@ body {
     .site-header .container {
         align-items: center;
     }
-    .nav-toggle { display: none; }
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        cursor: pointer;
+    }
     .site-nav ul {
         flex-direction: column;
         gap: 0.75rem;
         padding: 1rem 0 0;
     }
-    .site-nav { display: block; }
+    .site-nav {
+        display: none;
+    }
+    .site-nav.open {
+        display: block;
+    }
 }
+
+.features .grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; 
+    flex-wrap: nowrap; 
+}
+
+.features article {
+    flex: 0 0 30%; 
+    text-align: center;
+    background: var(--surface-alt);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.features img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+}
+
