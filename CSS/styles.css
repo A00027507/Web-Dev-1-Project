@@ -148,7 +148,6 @@ body {
     }
 }
 
-/* Brand cards grid tweaks */
 .cards.grid article h3 {
     margin-top: 0;
 }
@@ -247,13 +246,13 @@ body {
     margin-top: 4rem;
 }
 
-/* Reveal on scroll utilities */
+
 .reveal {
     opacity: 1;
     transform: none;
 }
 
-/* Back to top button */
+
 .back-to-top {
     position: fixed;
     right: 16px;
@@ -280,7 +279,7 @@ body {
     transform: translateY(0);
 }
 
-/* Mobile nav */
+
 .nav-toggle {
     display: none;
 }
