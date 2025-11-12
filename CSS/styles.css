@@ -604,11 +604,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 30px;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    
 }
 
+
 .features article {
-    flex: 0 0 30%; 
+    flex: 1 1 calc(33.333% - 1.5rem);
     text-align: center;
     background: var(--surface-alt);
     padding: 1rem;
@@ -616,10 +619,30 @@ body {
     box-shadow: var(--shadow-md);
 }
 
+
+@media (max-width: 900px) {
+    .features article {
+        flex: 1 1 calc(50% - 1.5rem);
+    }
+}
+
+@media (max-width: 600px) {
+    .features article {
+        flex: 1 1 100%;
+    }
+}
+
 .features img {
     width: 100%;
+    max-width: 100%;
     height: auto;
+    display: block;
     border-radius: var(--radius-sm);
+}
+
+.feature-photo {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
 }
 
 .brand-links  {
